@@ -1,0 +1,13 @@
+{
+  "name": "pres-async",
+  "version": "0.1.0",
+  "description": "A bunch of demos",
+  "main": "index.js",
+  "author": "Hao Luo",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^3.0.6",
+    "node-fetch": "^1.6.3",
+    "uniqid": "^4.1.1"
+  }
+}

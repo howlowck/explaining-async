@@ -2,7 +2,7 @@ var puts = require('./lib/puts')
 
 function * countDown (fuelStatus) {
   if (fuelStatus.everythingGood) {
-    var engineStatus = yield 3
+    var engineStatus = yield 3 // engineStatus === {everythingGood: true}
   }
 
   if (engineStatus.everythingGood) {

@@ -13,10 +13,9 @@ function * countDown () {
 }
 
 var iterator = countDown()
-var yieldedResult
 
 puts('starting countdown..')
-yieldedResult = iterator.next() // { value: 3, done: false }
+var yieldedResult = iterator.next() // { value: 3, done: false }
 puts(yieldedResult.value)
 yieldedResult = iterator.next() // { value: 2, done: false }
 puts(yieldedResult.value)

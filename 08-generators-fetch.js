@@ -5,31 +5,35 @@ var puts = require('./lib/puts')
 var apiRoute = 'https://bobsburger-names.azurewebsites.net/api/random'
 
 function requestName () {
-  return new Promise(function (resolve) {
-    gets(resolve)
-  })
+  return new Promise(gets)
 }
 
-function fetchRandomBurger () {
-  var fetchRequest = fetch(apiRoute)
-
-  return fetchRequest
+function fetchRandomBurgerName () {
+  return fetch(apiRoute)
     .then(function (res) {
       return res.json()
     })
-}
-
-function getBurgerName (obj) {
-  return obj.name
+    .then(function (data) {
+      return data.name
+    })
 }
 
 function * program () {
   puts('Enter your name: ')
   var name = yield requestName()
   puts('Fetch from Server...')
-  var burgerObj = yield fetchRandomBurger()
-  var burgerName = getBurgerName(burgerObj)
+  var burgerName = yield fetchRandomBurgerName()
   puts(name + ' wants a ' + burgerName)
 }
 
 runs(program)
+
+// async function program () {
+//   puts('Enter your name: ')
+//   var name = await requestName()
+//   puts('Fetch from Server...')
+//   var burgerName = await fetchRandomBurgerName()
+//   puts(name + ' wants a ' + burgerName)
+// }
+
+// program()

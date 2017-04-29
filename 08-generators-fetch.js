@@ -13,26 +13,41 @@ function fetchRandomBurgerName () {
     .then(function (res) {
       return res.json()
     })
-    .then(function (data) {
-      return data.name
-    })
 }
+
+function getName (resObject) {
+  return resObject.name
+}
+
+// puts('Enter your name: ')
+// var name
+// requestName()
+//   .then(function (personName) {
+//     puts('Fetch from Server...')
+//     name = personName
+//     return fetchRandomBurgerName()
+//   })
+//   .then(function (burgerNameObject) {
+//     var burgerName = getName(burgerNameObject)
+//     puts(name + ' wants a ' + burgerName)
+//   }).catch(err => console.log(err.message))
 
 function * program () {
   puts('Enter your name: ')
   var name = yield requestName()
   puts('Fetch from Server...')
-  var burgerName = yield fetchRandomBurgerName()
+  var burgerNameObject = yield fetchRandomBurgerName()
+  var burgerName = getName(burgerNameObject)
   puts(name + ' wants a ' + burgerName)
 }
-
 runs(program)
 
 // async function program () {
 //   puts('Enter your name: ')
 //   var name = await requestName()
 //   puts('Fetch from Server...')
-//   var burgerName = await fetchRandomBurgerName()
+//   var burgerNameObject = await fetchRandomBurgerName()
+//   var burgerName = getName(burgerNameObject)
 //   puts(name + ' wants a ' + burgerName)
 // }
 

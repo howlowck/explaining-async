@@ -2,7 +2,7 @@ var runs = require('./lib/runs')
 var fetch = require('node-fetch')
 var gets = require('./lib/gets')
 var puts = require('./lib/puts')
-var apiRoute = 'https://bobsburger-names.azurewebsites.net/api/random'
+var apiRoute = 'https://bobsburger.azurewebsites.net/api/random'
 
 function requestName () {
   return new Promise(gets)

@@ -6,7 +6,7 @@ gets(function (name) {
   puts('Name: ' + name)
   puts('Enter your email: ')
   gets(function (email) {
-    puts('Email: ' + name)
+    puts('Email: ' + email)
     puts('Enter your phone number: ')
     gets(function (phone) {
       puts('Phone: ' + phone)

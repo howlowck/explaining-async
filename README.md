@@ -1,6 +1,6 @@
 # Explaining Async/Await
 
-This is the code for my talk on async/await.
+This is the code for [my talk on async/await](https://www.slideshare.net/secret/7Y0nR1rIchCRgp).
 
 In order to run all the code include the async/wait, you'll need Node 7+.
 

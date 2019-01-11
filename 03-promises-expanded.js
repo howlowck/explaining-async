@@ -31,8 +31,8 @@ function requestPhone () {
 function requestBirthDate () {
   return new Promise(function (resolve, reject) {
     puts('Enter Your Birth Date: ')
-    gets(function (phone) {
-      resolve(phone)
+    gets(function (birthDate) {
+      resolve(birthDate)
     })
   })
 }

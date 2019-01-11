@@ -5,9 +5,10 @@
   "main": "index.js",
   "author": "Hao Luo",
   "license": "MIT",
+  "engines" : {
+    "node" : ">=10"
+  },
   "dependencies": {
-    "inquirer": "^3.0.6",
-    "node-fetch": "^1.6.3",
-    "uniqid": "^4.1.1"
+    "axios": "^0.18.0"
   }
 }

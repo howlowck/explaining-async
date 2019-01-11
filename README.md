@@ -1,5 +1,7 @@
 # Explaining Async/Await
 
+> This package requires at least **Node v10**
+
 This is the code for [my talk on async/await](https://www.slideshare.net/secret/7Y0nR1rIchCRgp).
 
 In order to run all the code include the async/wait, you'll need Node 7+.

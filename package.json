@@ -5,8 +5,8 @@
   "main": "index.js",
   "author": "Hao Luo",
   "license": "MIT",
-  "engines" : {
-    "node" : ">=10"
+  "engines": {
+    "node": ">=10"
   },
   "dependencies": {
     "axios": "^0.18.0"
